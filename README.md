@@ -26,7 +26,7 @@ Also be sure to checkout the following tutorial if you are not familiar with bui
   9)  Connect to PlanetScale (Run local): `pscale connect YOUR-DB-NAME-HERE main --port 3309`  
       Don't quite using ctrl+c after this step, instead open a new terminal to run the below commands. I found that I got connection       issues after quiting and then running `npx prisma db push`
   11)   Sync Prisma & Pascale: `npx prisma db push`
-  12)   Run: `pscale shell myfirstdatabase main`
+  12)   Run: `pscale shell YOUR-DB-NAME-HERE main`
   13)   Run: `describe {model name};` < (Remember to use a semicolon)
   14)   When schema is okay, promote schema to production: `pscale branch promote YOUR-DB-NAME-HERE main`
   15)   Start building your API in app/api/hello/route.ts (or route.js). 
