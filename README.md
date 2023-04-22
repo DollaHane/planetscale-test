@@ -33,7 +33,7 @@ Also be sure to checkout the following tutorial if you are not familiar with bui
         **NB!** Review the API's I created as the syntax for Next v13 is very differant from standard Express syntax. 
   16) Run: `npm run dev`
  
-Inevatbably you'll need to restart your project during developement, in order to make sure you dont run into connection problems with the PlanetScale/Prisma server, I suggest running the following commands in order:
+Inevitably you'll need to restart your project during developement, in order to make sure you dont run into connection problems with the PlanetScale/Prisma server, I suggest running the following commands in order:
   1) `pscale auth login`
   2) `pscale connect YOUR-DB-NAME-HERE main --port 3309`
   3) `npx prisma db push`
