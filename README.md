@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 So this is my first attempt at deploying a Next.js 13 app (This is also my first README.md :P). Herein I'll be detailing the necessary steps in deploying a simple app and some of the challenges I faced.
 
+I would advise watching this video which covers much of the below (except deployment): https://www.youtube.com/watch?v=JtqdAn_wYzY
+
 ## TOOLS USED
   1) Next.js 13
   2) Prisma
@@ -12,21 +14,22 @@ So this is my first attempt at deploying a Next.js 13 app (This is also my first
 
 ## FRONT END DEVELOPEMENT
 
-1) Login to PlanetScale and create new database
-2) Install NEXT App: `npx create-next-app@latest`
-3) Install Prisma: `npm install prisma --save-dev` /`npx prisma init`
-4) Check HomeBrew Version: `brew -v`
-5) PlanetScale Auth: `pscale auth login`
-6) Edit .env: `DATABASE_URL="mysql://root@127.0.0.1:3309/YOUR-DB-NAME-HERE"`
-7) Edit schema.prisma variables:  
-8) Define the schema model in schema.prisma
-9) Connect to PlanetScale (Run local): `pscale connect myfirstdatabase main --port 3309` < (Don't quite using ctrl+c, open new terminal)
-10) Sync Prisma & Pascale: `npx prisma db push`
-11) Run: `npx prisma generate`
-12) Run: `pscale shell myfirstdatabase main`
-13) Run: `describe {model name ie ”BookSuggestions”};` < (Remember to use semicolon)
-14) When schema is okay, promote schema to production: `pscale branch promote YOUR-DB-NAME-HERE main`
-15) Create API for comms to front-end. Go to app/api/hello/route.ts to write the API endpoints.
+  1)  Login to PlanetScale and create new database
+  2)  Install Next.js App: `npx create-next-app@latest`
+  3)  Install Prisma: `npm install prisma` then `npx prisma init`
+  4)  Check HomeBrew Version: `brew -v`, if you do not have HomeBrew installed run `brew install node`
+  5)  Login to PlanetScale from the terminal: `pscale auth login`> This will open a webpage for code confirmation.
+  6)  Edit .env: `DATABASE_URL="mysql://root@127.0.0.1:3309/YOUR-DB-NAME-HERE"`
+  7)  Edit schema.prisma variables:   
+  8)  Define the schema model in schema.prisma
+  9)  Connect to PlanetScale (Run local): `pscale connect myfirstdatabase main --port 3309`  
+      Don't quite using ctrl+c after this step, instead open a new terminal to run the below commands. I found that I got connection       issues when running `npx prisma db push`
+  11)   Sync Prisma & Pascale: `npx prisma db push`
+  12)   Run: `pscale shell myfirstdatabase main`
+  13)   Run: `describe {model name};` < (Remember to use a semicolon)
+  14)   When schema is okay, promote schema to production: `pscale branch promote YOUR-DB-NAME-HERE main`
+  15)   Start building your API in app/api/hello/route.ts (or route.js). 
+        **NB!** Review the endpoints I created as the code from the tutorial will not work after the API syntax changes made in Next v13. 
 
 ---
 ## PUSH TO GITHUB
