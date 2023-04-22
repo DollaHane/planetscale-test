@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## INTRO
 
-So this is my first "FULL NOOB" attempt at deploying a Next.js 13 app (This is also my first README.md :P). Herein I'll be detailing the necessary steps in deploying a simple app and some of the challenges I faced.
+So this is my first "FULL NOOB" attempt at deploying a Next.js 13 app (This is also my first README.md :P). Herein I'll be detailing the necessary steps in deploying a simple app and some of the challenges I faced. Here is a link to the app: https://planetscale-test-eight.vercel.app
 
 I would advise watching this video which covers much of the below (except deployment): https://www.youtube.com/watch?v=JtqdAn_wYzY
 Also be sure to checkout the following tutorial if you are not familiar with building Next.js 13 API's: https://www.youtube.com/watch?v=vrR4MlB7nBI&t=380s
