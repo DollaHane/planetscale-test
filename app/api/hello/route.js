@@ -2,9 +2,14 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export async function GET() {
+
+export async function GET(req, res) {
   const books = await prisma.bookSuggestions.findMany();
+  if (req.method === 'GET') {
   return new Response(JSON.stringify(books), {success: true})
+  } else {
+    return res.status(405).json({ message: 'Method not allowed', success: false })
+  }
 }
 
 export async function POST(req) {
@@ -14,6 +19,7 @@ export async function POST(req) {
       bookTitle: body.title,
       bookAuthor: body.author,
       bookGenre: body.genre,
+      bookImage: body.image,
     }
   })
   return new Response(JSON.stringify(newEntry), { success: true })

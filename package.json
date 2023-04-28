@@ -10,7 +10,11 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.10.0",
     "@prisma/client": "^4.13.0",
+    "cloudinary": "^1.36.2",
+    "dotenv": "^16.0.3",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "init": "^0.1.2",

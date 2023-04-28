@@ -1,31 +1,62 @@
+
 .main {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
+  width: 90vw;
+  height: auto;
+  padding: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
-form {
-  width: 60%;
-  padding: 20px;
-  border: 2px solid gray
+h2 {
+  background: #1AFF00;
+  background: linear-gradient(to left, #00C9FF 0%, #92FE9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+h4 {
+  text-align: center;
+}
+
+.desc {
+  text-align: center;
+  width: 90%;
+}
+
+.form-body {
+  width: 70%;
+  margin: 50px auto 20px auto;
+  padding: 20px;
+  font-size: small;
+  border: 1px solid rgb(191, 191, 191);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
 .form-div {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: center;
+  align-items: center;
   margin: 10px 0 10px 0;
 }
 
 .input {
+  width: 90%;
+  height: 25px;
   padding-left: 5px;
+  align-content: center;
   border: none;
   border-radius: 5px;
   outline: none;
-  background-color: white;
+  background-color: rgb(222, 222, 222);
   color: black;
 }
 
@@ -33,7 +64,7 @@ button {
   display: flex;
   width: 30%;
   height: 30px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 10px auto;
   justify-content: center;
   align-items: center;
   border: none;
@@ -46,13 +77,89 @@ button:active {
   background: linear-gradient(90deg, #00c8ff98 0%, #92fe9d88 100%);
 }
 
-.list-div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
 
 .list {
-  margin: 10px 0 0 0;
-  color: white;
+  width: 200px;
+  font-size: x-small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  list-style-type: none;
+}
+
+.books {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.image-prev {
+  display: flex;
+  width: 25%;
+  margin: 10px auto 10px auto;
+}
+
+.gallery {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.gallery-div {
+  width: 90%;
+  height: auto;
+  margin: 20px auto 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.gallery-cont {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery-img {
+  height: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.gallery-id {
+  font-size: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 600px) { 
+  .main {
+    padding: 2px;
+  }
+
+  h4 {
+    width: 80%;
+    text-align: center;
+    padding:5px;
+    margin: 10px 20px 10px auto;
+  }
+  .desc {
+    font-size: x-small;
+    text-align: center;
+    width: 80%;
+    padding:5px;
+    margin: 10px 20px 10px auto;
+  }
+  .form-body {
+    width: 80%;
+    padding:5px;
+    margin: 50px 20px 20px auto;
+  }
+  .form-div {
+  grid-template-columns: repeat(1, 2fr);
+  }
+  .input {
+    width: 90%;
+    margin: 10px 0 0 0;
+  }
 }
