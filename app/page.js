@@ -123,7 +123,7 @@ export default function Home() {
               name='file'
             />
           </div>
-          <img src={imageSrc} className='image-prev'/>
+          <img src={imageSrc} className='image-prev' alt="Book cover"/>
             
             {imageSrc && !uploadData && (
               <p>
@@ -191,7 +191,7 @@ export default function Home() {
           <div className='gallery-div'>
             {data.map(data => (
               <div className='gallery-cont' key={data.id}>
-                <img src={data.bookImage} className='gallery-img'></img>
+                <img src={data.bookImage} className='gallery-img' alt="Book cover"></img>
                 <div className='list'>
                   <p>Title: {data.bookTitle}</p>
                   <p>Author: {data.bookAuthor}</p>
@@ -212,7 +212,7 @@ export default function Home() {
         <h3>Image Gallary:</h3>
         <div className='gallery-div'>
           {Array.isArray(images.resources) && images.resources.map(image => (
-            <div className='gallery-cont'>
+            <div className='gallery-cont' key={image.asset_id}>
               <img src={image.secure_url} key={image.asset_id} alt="Book cover" className='gallery-img'/>
               <p key={image.asset_id} className='gallery-id'>{image.public_id}</p>
             </div>
