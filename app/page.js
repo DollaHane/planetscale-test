@@ -89,7 +89,7 @@ export default function Home() {
     setTitle('');
     setAuthor('')
     setGenre('')
-    //window.location.reload()
+    window.location.reload()
   }
 
   useEffect(() => {
@@ -175,7 +175,7 @@ export default function Home() {
             className='input'>
 
             {Array.isArray(images.resources) && images.resources.map(image => (
-              <option className='input' key={image.asset_id} value={image.secure_url}>{image.public_id}</option>
+              <option className='input' key={image.asset_id} value={image.url}>{image.public_id}</option>
             ))}
 
           </select>
@@ -213,7 +213,7 @@ export default function Home() {
         <div className='gallery-div'>
           {Array.isArray(images.resources) && images.resources.map(image => (
             <div className='gallery-cont' key={image.asset_id}>
-              <img src={image.secure_url} key={image.asset_id} alt="Book cover" className='gallery-img'/>
+              <img src={image.url} key={image.asset_id} alt="Book cover" className='gallery-img'/>
               <p key={image.asset_id} className='gallery-id'>{image.public_id}</p>
             </div>
           ))}
