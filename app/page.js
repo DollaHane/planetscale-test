@@ -108,7 +108,7 @@ export default function Home() {
 
       <h2>Welcome!</h2>
       <h4>This is a book gallery powered by PlanetScale and Cloudinary.</h4>
-      <p className='desc'>Feel free to upload a cover of your favourite book add it to the list.</p>
+      <p className='desc'>Feel free to upload a cover of your favourite book and add it to the list.</p>
 
       <form 
           method="post" 
