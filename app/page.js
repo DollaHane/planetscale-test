@@ -213,8 +213,8 @@ export default function Home() {
         <div className='gallery-div'>
           {Array.isArray(images.resources) && images.resources.map(image => (
             <div className='gallery-cont' key={image.asset_id}>
-              <img src={image.url} key={image.asset_id} alt="Book cover" className='gallery-img'/>
-              <p key={image.asset_id} className='gallery-id'>{image.public_id}</p>
+              <img src={image.url} alt="Book cover" className='gallery-img'/>
+              <p className='gallery-id'>{image.public_id}</p>
             </div>
           ))}
         </div>
